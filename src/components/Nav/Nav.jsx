@@ -10,7 +10,7 @@ const Nav = (props) => {
     return null;
   }
 
-  const { onSearch } = props;
+  const { onSearch, logout } = props;
 
   const { nav, btn } = styled;
 
@@ -22,6 +22,9 @@ const Nav = (props) => {
         </NavLink>
         <NavLink to="/about">
           <button className={btn}>About</button>
+        </NavLink>
+        <NavLink to="/">
+          <button className={btn} onClick={logout}>Logout</button>
         </NavLink>
         <SearchBar onSearch={onSearch} />
       </nav>

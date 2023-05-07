@@ -2,15 +2,20 @@ import { useState } from 'react';
 import styles from './form.module.css';
 import { validation } from '../../validation';
 
-export default function Form() {
+export default function Form(props) {
 
+    const {login} = props;
     const {divPrinc, input, submit, img, label} = styles;
     const [userdata, setUserdata] = useState({
         email:'',
         password:'',
-    });
-  
+    });  
     const [errors,setErrors] = useState({});
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        login(userdata);
+    };
 
     const handleChange = (event) => {
         const property = event.target.name;
@@ -22,7 +27,7 @@ export default function Form() {
 
   return (
     <div className={divPrinc}>
-        <form>
+        <form onSubmit={handleSubmit}>
         <img className={img} src="https://miro.medium.com/v2/resize:fit:1000/1*aZB4dwe_JRcp1uMHiGYf8g.jpeg" alt=""></img>
         <label className={label}>Correo Electrónico:</label>
         <input className={input} name="email" value={userdata.email} onChange={handleChange} type="text"/>

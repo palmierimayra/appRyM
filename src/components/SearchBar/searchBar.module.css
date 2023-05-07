@@ -1,7 +1,7 @@
 .divsch {
-  position:absolute;
-  align-items: center;
-  margin-top: -1.5  mm;
+  display:inline-block;
+  align-items: right;
+  margin-top: -1.5 mm;
   height: 10mm;
   padding: 1mm;
 }
@@ -18,7 +18,6 @@
   font-family: tahoma;
   margin-left: 2mm;
   margin-right: 5mm;
-
 }
 
 .input {
