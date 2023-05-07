@@ -1,14 +1,20 @@
 nav {
-  display:flex;
-  justify-content: flex-end;
-  background-image: url(https://i.pinimg.com/originals/47/25/94/4725945feb0214c458718aad71a4f95b.jpg);
+  display: flex;
+  justify-content: end;
+  background-color:rgba(6,37,31);
   height: 10mm;
-  border: solid darkviolet 0.5mm;
+  border: solid green 0.5mm;
   padding: 1mm;
 }
 
+.imglogo {
+  display:inline-block;
+  align-items: right;
+  height: auto;
+}
+
 .btn {
-  background-color: violet;
+  background-color: lightseagreen;
   color: black;
   border-radius: 2mm;
   width: 20mm;

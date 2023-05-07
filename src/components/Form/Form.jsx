@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import styles from './form.module.css';
+import styled from './form.module.css';
 import { validation } from '../../validation';
 
 export default function Form(props) {
 
     const {login} = props;
-    const {divPrinc, input, submit, img, label} = styles;
+    const {divPrinc, input, submit, img, label} = styled;
     const [userdata, setUserdata] = useState({
         email:'',
         password:'',

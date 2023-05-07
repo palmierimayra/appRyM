@@ -10,10 +10,9 @@
     font-family: Calibri;
     font-size: 30px;
     text-align: center;
-    -webkit-text-stroke: 1px black;
-    color: white;
+    color: black;
     margin: 2mm;
-    background-color: darkviolet;
+    background-color: lightseagreen;
   }
 
   .div{

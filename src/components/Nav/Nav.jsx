@@ -12,7 +12,7 @@ const Nav = (props) => {
 
   const { onSearch, logout } = props;
 
-  const { nav, btn } = styled;
+  const { nav, btn, imglogo } = styled;
 
   return (
     <div>
@@ -27,8 +27,9 @@ const Nav = (props) => {
           <button className={btn} onClick={logout}>Logout</button>
         </NavLink>
         <SearchBar onSearch={onSearch} />
+        <img className={imglogo} src="https://preview.redd.it/eg7w8d3e6rhz.png?width=1080&crop=smart&auto=webp&v=enabled&s=8b4de4e48605850b5463b0a7d6d30eb1309c77d3" alt="" />
       </nav>
-    </div>
+          </div>
   );
 };
 
