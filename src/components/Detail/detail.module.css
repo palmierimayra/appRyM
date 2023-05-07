@@ -1,0 +1,28 @@
+.divPrinc {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-weight: bolder;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.title {
+  text-decoration: underline;
+  font-size: 56px;
+}
+.datos {
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+
+.img {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 400px;
+  height: 400px;
+  border: solid white 1mm;
+  border-radius: 200px;
+}

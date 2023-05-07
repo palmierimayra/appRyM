@@ -1,8 +1,9 @@
-.divsch {
-  position:absolute;
-  align-items: center;
-  margin-top: -1.5mm;
-  height: 10mm;
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-image: url(https://i.pinimg.com/originals/47/25/94/4725945feb0214c458718aad71a4f95b.jpg);
+  height: auto;
+  border: solid darkviolet 0.5mm;
   padding: 1mm;
 }
 
@@ -13,16 +14,10 @@
   width: 20mm;
   height: 8mm;
   text-align: center;
+  align-items: center;
   font-size: 14px;
   font-weight: bolder;
   font-family: tahoma;
   margin-left: 2mm;
   margin-right: 5mm;
-
-}
-
-.input {
-  border-radius: 10px;
-  height: 8mm;
-  width: 100mm;
 }
