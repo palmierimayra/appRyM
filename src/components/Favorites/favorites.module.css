@@ -1,0 +1,22 @@
+.divFondo {
+    display: flex;
+    justify-content:space-around;
+}
+
+.selectMenu {
+    position: absolute;
+}
+
+.selectC {
+    margin-top: 1mm;
+    padding: 0.5mm;
+    border-radius: 2mm;
+    border: solid green 1mm;
+    background-color: lightseagreen;
+    color: black;
+    width: 200px;
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+}

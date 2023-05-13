@@ -8,6 +8,7 @@ import Detail from "./components/Detail/Detail";
 import About from "./components/About/About";
 import Form from "./components/Form/Form";
 import { useEffect } from "react";
+import Favorites from "./components/Favorites/Favorites";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -56,6 +57,7 @@ function App() {
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:id" element={<Detail />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
       </Routes>
     </div>
   );

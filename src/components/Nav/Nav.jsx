@@ -20,6 +20,9 @@ const Nav = (props) => {
         <NavLink to="/home">
           <button className={btn}>Home</button>
         </NavLink>
+        <NavLink to="/favorites">
+          <button className={btn}>Favorites</button>
+        </NavLink>
         <NavLink to="/about">
           <button className={btn}>About</button>
         </NavLink>
