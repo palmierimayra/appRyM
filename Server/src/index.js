@@ -1,26 +1,30 @@
-const http = require('http');
+const express = require('express');
+const server = express();
 const PORT = 3001;
-const getCharById = require('./controllers/getCharById');
+const router = require ("../src/routes/index");
 
-http.createServer((req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-    const { url } = req;
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
 
-    // if (url.includes('/rickandmorty/character')) {
-    //   // Obtener el ID del personaje de la URL [El split genera un array y el .at toma la última posición del mismo]
-    //   const id = url.split('/').at(-1);
-    //   // Buscar el personaje en el archivo data.js
-    //   const character = dataJs.find((character) => character.id === Number(id));
-    //   if(!character){
-    //     res.writeHead(404, {'Content-Type': 'text/plain'});
-    //     return res.end("route not found");
-    //   }
-      
-    if (url.includes('/rickandmorty/character')) {
-      const id = url.split('/').at(-1);
-      getCharById.getCharById(res,id);
-    }
-  })
-  .listen(PORT, 'localhost', () => {
-    console.log('Puerto 3001');
-  });
+server.use(express.json());
+
+server.use((req, res, next) => {
+   res.header('Access-Control-Allow-Origin', '*');
+   res.header('Access-Control-Allow-Credentials', 'true');
+   res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept'
+   );
+   res.header(
+      'Access-Control-Allow-Methods',
+      'GET, POST, OPTIONS, PUT, DELETE'
+   );
+   next();
+});
+
+server.use((req,res) => {
+   if(router) {
+      res.send("/rickandmorty" + router);
+   }
+})
