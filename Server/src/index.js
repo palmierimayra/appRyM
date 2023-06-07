@@ -17,9 +17,9 @@ server.use((req, res, next) => {
    next();
 });
 
-server.use("/rickandmorty",router);
-
 server.use(express.json());
+
+server.use("/rickandmorty",router);
 
 server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
