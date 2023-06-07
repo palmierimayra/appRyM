@@ -3,12 +3,6 @@ const server = express();
 const PORT = 3001;
 const router = require ("../src/routes/index");
 
-server.listen(PORT, () => {
-   console.log('Server raised in port: ' + PORT);
-});
-
-server.use(express.json());
-
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');
    res.header('Access-Control-Allow-Credentials', 'true');
@@ -23,8 +17,10 @@ server.use((req, res, next) => {
    next();
 });
 
-server.use((req,res) => {
-   if(router) {
-      res.send("/rickandmorty" + router);
-   }
-})
+server.use("/rickandmorty",router);
+
+server.use(express.json());
+
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
